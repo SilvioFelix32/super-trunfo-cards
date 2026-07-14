@@ -1,6 +1,6 @@
 # Super Trunfo de Países
 
-Projeto do jogo **Super Trunfo de Países**, desenvolvido em C. Neste primeiro nível, o programa permite cadastrar e exibir os dados de duas cartas com informações sobre cidades.
+Projeto do jogo **Super Trunfo de Países**, desenvolvido em C. O repositório contém as três versões do desafio — inciante, intermediário e mestre — cada uma em sua pasta.
 
 ## Sobre o projeto
 
@@ -27,9 +27,20 @@ O programa lê os dados pelo teclado, armazena em variáveis e exibe as duas car
 
 ### 1. Compilar
 
+Escolha o nível desejado e compile a partir da pasta correspondente:
+
 ```bash
-gcc -Wall -Wextra -std=c11 -o super_trufo main.c
+# Nível inciante
+gcc -Wall -Wextra -std=c11 -o super_trufo nivel-inciante/main.c
+
+# Nível intermediário
+gcc -Wall -Wextra -std=c11 -o super_trufo nivel-intermediario/main.c
+
+# Nível mestre
+gcc -Wall -Wextra -std=c11 -o super_trufo nivel-mestre/main.c
 ```
+
+Também é possível compilar a partir da raiz com `main.c` (equivalente ao nível mestre).
 
 ### 2. Executar
 
@@ -68,12 +79,23 @@ Pontos turísticos: 30
 ## Estrutura do projeto
 
 ```
-super-trufo-cards/
-├── main.c          # Código-fonte principal
-├── super_trufo     # Executável (gerado após compilar)
-├── assets/         # Imagens e capturas de tela
+super-trunfo-cards/
+├── nivel-inciante/
+│   └── main.c          # Nível 1 — cadastro e exibição de duas cartas
+├── nivel-intermediario/
+│   └── main.c          # Nível 2 — densidade populacional e PIB per capita
+├── nivel-mestre/
+│   └── main.c          # Nível 3 — Super Poder e comparação entre cartas
+├── main.c              # Cópia do nível mestre (entrada na raiz)
+├── assets/             # Imagens e capturas de tela
 └── README.md
 ```
+
+| Pasta | Nível | Funcionalidades |
+|-------|-------|-----------------|
+| `nivel-inciante/` | Inciante | Leitura e exibição dos dados de duas cartas |
+| `nivel-intermediario/` | Intermediário | + Densidade populacional e PIB per capita |
+| `nivel-mestre/` | Mestre | + Super Poder e comparação atributo a atributo |
 
 ## Demonstração
 
@@ -81,16 +103,10 @@ Salve o print do terminal em `assets/terminal.png` (ou ajuste o caminho abaixo) 
 
 ![Execução do programa no terminal](assets/terminal.png)
 
-## Nível atual
+## Níveis implementados
 
-Este é o **Nível 1** do desafio. O foco está em:
+Todos os três níveis do desafio estão disponíveis, cada um em sua pasta:
 
-- Leitura de dados do usuário (`scanf`)
-- Armazenamento em variáveis
-- Exibição formatada na tela (`printf`)
-
-Não há comparação entre cartas, estruturas de repetição (`for`, `while`) nem condicionais (`if`, `else`) nesta versão.
-
-## Próximos passos
-
-Nos níveis seguintes, o jogo evoluirá com novas funcionalidades, como comparação de atributos entre cartas e lógica de disputa do Super Trunfo.
+- **Inciante** — leitura, armazenamento e exibição (`scanf`, variáveis, `printf`)
+- **Intermediário** — cálculo de densidade populacional e PIB per capita (`float`, operadores aritméticos)
+- **Mestre** — Super Poder, comparação entre cartas e `unsigned long int` para população
