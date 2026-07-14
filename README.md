@@ -38,6 +38,15 @@ gcc -Wall -Wextra -std=c11 -o super_trufo nivel-intermediario/main.c
 
 # Nível mestre
 gcc -Wall -Wextra -std=c11 -o super_trufo nivel-mestre/main.c
+
+# Aula — comparando cartas
+gcc -Wall -Wextra -std=c11 -o super_trufo comparando-cartas/main.c
+
+# Aula — interatividade (menu switch)
+gcc -Wall -Wextra -std=c11 -o super_trufo interatividade/main.c
+
+# Aula — comparação avançada (dois atributos)
+gcc -Wall -Wextra -std=c11 -o super_trufo comparacao-avancada/main.c
 ```
 
 Também é possível compilar a partir da raiz com `main.c` (equivalente ao nível mestre).
@@ -86,6 +95,12 @@ super-trunfo-cards/
 │   └── main.c          # Nível 2 — densidade populacional e PIB per capita
 ├── nivel-mestre/
 │   └── main.c          # Nível 3 — Super Poder e comparação entre cartas
+├── comparando-cartas/
+│   └── main.c          # Aula — comparação de um atributo com if/if-else
+├── interatividade/
+│   └── main.c          # Aula — menu switch e comparação interativa
+├── comparacao-avancada/
+│   └── main.c          # Aula — dois atributos, menus dinâmicos e soma
 ├── main.c              # Cópia do nível mestre (entrada na raiz)
 ├── assets/             # Imagens e capturas de tela
 └── README.md
@@ -96,6 +111,9 @@ super-trunfo-cards/
 | `nivel-inciante/` | Inciante | Leitura e exibição dos dados de duas cartas |
 | `nivel-intermediario/` | Intermediário | + Densidade populacional e PIB per capita |
 | `nivel-mestre/` | Mestre | + Super Poder e comparação atributo a atributo |
+| `comparando-cartas/` | Aula (comparação) | Cartas pré-definidas, compara um atributo com `if`/`if-else` |
+| `interatividade/` | Aula (aventureiro) | Menu `switch`, cartas de países, comparação interativa |
+| `comparacao-avancada/` | Aula (mestre) | Dois atributos, menus dinâmicos, soma e vencedor final |
 
 ## Demonstração
 
@@ -110,3 +128,6 @@ Todos os três níveis do desafio estão disponíveis, cada um em sua pasta:
 - **Inciante** — leitura, armazenamento e exibição (`scanf`, variáveis, `printf`)
 - **Intermediário** — cálculo de densidade populacional e PIB per capita (`float`, operadores aritméticos)
 - **Mestre** — Super Poder, comparação entre cartas e `unsigned long int` para população
+- **Comparando cartas** (outra aula) — cartas pré-definidas, comparação de um único atributo com `if`/`if-else`
+- **Interatividade** (aula aventureiro) — menu com `switch`, escolha do atributo e comparação com `if-else` aninhados
+- **Comparação avançada** (aula mestre) — dois atributos distintos, menus dinâmicos, soma dos valores e operador ternário
