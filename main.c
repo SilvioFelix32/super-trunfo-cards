@@ -1,9 +1,9 @@
 /*
- * Super Trunfo de Países - Nível 1
+ * Super Trunfo de Países - Nível Aventureiro
  *
  * Programa para cadastrar e exibir os dados de duas cartas do jogo.
  * Cada carta representa uma cidade com informações como população, área,
- * PIB e pontos turísticos.
+ * PIB e pontos turísticos. Calcula também densidade populacional e PIB per capita.
  *
  * Autor: Super Trunfo Cards
  */
@@ -23,6 +23,8 @@ int main(void)
     float area1;                   /* Área em quilômetros quadrados */
     float pib1;                    /* Produto Interno Bruto em bilhões de reais */
     int pontosTuristicos1;         /* Quantidade de pontos turísticos */
+    float densidadePopulacional1;  /* Habitantes por quilômetro quadrado */
+    float pibPerCapita1;           /* Riqueza média por habitante em reais */
 
     /*
      * Variáveis da Carta 2
@@ -35,6 +37,8 @@ int main(void)
     float area2;
     float pib2;
     int pontosTuristicos2;
+    float densidadePopulacional2;
+    float pibPerCapita2;
 
     /* Mensagem de boas-vindas e instruções gerais para o usuário */
     printf("=== Super Trunfo de Paises - Cadastro de Cartas ===\n");
@@ -66,6 +70,10 @@ int main(void)
     printf("Digite o numero de pontos turisticos: ");
     scanf("%d", &pontosTuristicos1);
 
+    /* Densidade = população / área; PIB per capita em reais = PIB (bi) × 10⁹ / população */
+    densidadePopulacional1 = (float)populacao1 / area1;
+    pibPerCapita1 = (pib1 * 1000000000.0f) / (float)populacao1;
+
     printf("\n");
 
     /*
@@ -94,6 +102,9 @@ int main(void)
     printf("Digite o numero de pontos turisticos: ");
     scanf("%d", &pontosTuristicos2);
 
+    densidadePopulacional2 = (float)populacao2 / area2;
+    pibPerCapita2 = (pib2 * 1000000000.0f) / (float)populacao2;
+
     printf("\n");
 
     /*
@@ -110,6 +121,8 @@ int main(void)
     printf("Area: %.2f km²\n", area1);
     printf("PIB: %.2f bilhões de reais\n", pib1);
     printf("Numero de Pontos Turisticos: %d\n", pontosTuristicos1);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidadePopulacional1);
+    printf("PIB per Capita: %.2f reais\n", pibPerCapita1);
 
     printf("\n");
 
@@ -121,6 +134,8 @@ int main(void)
     printf("Area: %.2f km²\n", area2);
     printf("PIB: %.2f bilhões de reais\n", pib2);
     printf("Numero de Pontos Turisticos: %d\n", pontosTuristicos2);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidadePopulacional2);
+    printf("PIB per Capita: %.2f reais\n", pibPerCapita2);
 
     return 0;
 }
